@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 bot.on('message' , message => {
     if(message.content === '!Kaibaman') {
-         var rand = Math.floor(Math.random() * 7;
+         var rand = Math.floor(Math.random() * 7);
 
         if(rand === 0) {
             message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");

@@ -51,7 +51,7 @@ bot.on('message' , message => {
         voiceChannel = message.member.voiceChannel;
         voiceChannel.join().then(connection => {
             message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
-            const dispatcher = connection.playFile('');
+            const dispatcher = connection.playFile('/Exodia Summoned.mp3');
             dispatcher.on("end", end => {VC.leave()});
         }).catch(console.error);
         isReady === true;

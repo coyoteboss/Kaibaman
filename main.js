@@ -9,9 +9,7 @@ bot.on('ready', () => {
 
 bot.on('message' , message => {
 
-    message.content === message.content.toLocaleUpperCase;
-
-    if(message.content === '!KAIBAMAN' && isReady) {
+    if(message.content === '!Kaibaman' && isReady) {
         isReady === false;
         var rand = Math.floor(Math.random() * 7);
 
@@ -46,55 +44,55 @@ bot.on('message' , message => {
 
     var voiceChannel;
 
-    if(isReady && message.content === 'I SUMMON EXODIA') {
+    if(isReady && message.content === 'I Summon Exodia') {
         isReady === false;
         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I SUMMON EXODIA NECROSS') {
+    else if(isReady && message.content === 'I Summon Exodia Necross') {
         isReady === false;
         message.reply("Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I SUMMON THE LEGENDARY EXODIA INCARNATE') { 
+    else if(isReady && message.content === 'I Summon The Legendary Exodia Incarnate') { 
         isReady === false;
         message.reply("Ah The Legendary Exodia Incarnate it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I SUMMON EXODIA MASTER OF THE GUARD') { 
+    else if(isReady && message.content === 'I Summon Exodia Master of The Guard') { 
         isReady === false;
         message.reply("Ah Exodia Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I SUMMON EXXOD MASTER OF THE GUARD') { 
+    else if(isReady && message.content === 'I Summon Exxod Master of The Guard') { 
         isReady === false;
-        message.reply("Ah Exxod Master of the Guard it's not possible. Nobody's ever been able to summon him!");
+        message.reply("Ah Exxod Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I SUMMON EXODIUS THE ULTIMATE FORBIDDEN LORD') { 
+    else if(isReady && message.content === 'I Summon Exodius The Ultimate Forbidden Lord') { 
         isReady === false;
-        message.reply("Ah Exodius the Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
+        message.reply("Ah Exodius The Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I SUMMON EXPLODIA') { 
+    else if(isReady && message.content === 'I Summon Explodia') { 
         isReady === false;
         message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === "MY GRANDFATHER'S DECK HAS NO PATHETIC CARDS") {
+    else if(isReady && message.content === "MY Grandfather's Deck Has No Pathetic Cards") {
         isReady === false;
         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === "DRAW YOUR LAST PATHETIC CARD") {
+    else if(isReady && message.content === "Draw Your Last Pathetic Card") {
         isReady === false;
         message.reply("My grandfather's deck has no pathetic cards");
         isReady === true;

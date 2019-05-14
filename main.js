@@ -9,7 +9,7 @@ bot.on('ready', () => {
 
 bot.on('message' , message => {
 
-    message === message.content.toLocaleUpperCase;
+    message.content === message.content.toLocaleUpperCase;
 
     if(message.content === '!KAIBAMAN' && isReady) {
         isReady === false;

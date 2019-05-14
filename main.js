@@ -13,7 +13,7 @@ bot.on('message' , message => {
 
     if(message.content === '!KAIBAMAN' && isReady) {
         isReady === false;
-         var rand = Math.floor(Math.random() * 7);
+        var rand = Math.floor(Math.random() * 7);
 
         if(rand === 0) {
             message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
@@ -48,23 +48,13 @@ bot.on('message' , message => {
 
     if(isReady && message.content === 'I SUMMON EXODIA') {
         isReady === false;
-        voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection => {
-            message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
-            const dispatcher = connection.playFile('/Exodia Summoned.mp3');
-            dispatcher.on("end", end => {VC.leave()});
-        }).catch(console.error);
+        message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
     else if(isReady && message.content === 'I SUMMON EXODIA NECROSS') {
         isReady === false;
-        voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection => {
-            message.reply("Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!");
-            const dispatcher = connection.playFile('');
-            dispatcher.on("end", end => {VC.leave()});
-        }).catch(console.error);
+        message.reply("Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
@@ -94,34 +84,19 @@ bot.on('message' , message => {
 
     else if(isReady && message.content === 'I SUMMON EXPLODIA') { 
         isReady === false;
-        voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection => {
-            message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
-            const dispatcher = connection.playFile('');
-            dispatcher.on("end", end => {VC.leave()});
-        }).catch(console.error);
+        message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
         isReady === true;
     }
 
     else if(isReady && message.content === "MY GRANDFATHER'S DECK HAS NO PATHETIC CARDS") {
         isReady === false;
-        voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection => {
-            message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
-            const dispatcher = connection.playFile('');
-            dispatcher.on("end", end => {VC.leave()});
-        }).catch(console.error);
+        message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
     else if(isReady && message.content === "DRAW YOUR LAST PATHETIC CARD") {
         isReady === false;
-        voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection => {
-            message.reply("My grandfather's deck has no pathetic cards");
-            const dispatcher = connection.playFile('');
-            dispatcher.on("end", end => {VC.leave()});
-        }).catch(console.error);
+        message.reply("My grandfather's deck has no pathetic cards");
         isReady === true;
     }
 });

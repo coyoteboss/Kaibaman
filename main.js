@@ -19,10 +19,10 @@ bot.on('message' , message => {
         
     }
     
-    if(message.content === '!leave" && !isReady) {
+    if(message.content === '!leave' && isReady === false) {
        VC = message.member.voiceChannel;
        VC.leave();
-}
+    }
        
 
     if(message.content === '!Kaibaman' && isReady) {

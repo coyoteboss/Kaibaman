@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var isReady = true;
 
 bot.on('ready', () => {
-    console.log('I am ready!');
+    console.log('I ready!');
 });
 
 bot.on('message' , message => {
@@ -76,7 +76,12 @@ bot.on('message' , message => {
 
     else if(isReady && message.content === 'I Summon Exodius The Ultimate Forbidden Lord') { 
         isReady === false;
+        var voiceChannel = message.member.voiceChannel;
         message.reply("Ah Exodius The Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
+        voiceChannel.join().then(connection => {
+            const dispatcher = connectionplayFile('Users/mattalter/Downloads/Explodia.mp3');
+            voiceChannel.leave();
+        }
         isReady === true;
     }
 

@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 var isReady = true;
-var VC = message.member.voiceChannel;
 
 bot.on('ready', () => {
     console.log('I ready I ready!');
 });
 
 bot.on('message' , message => {
+    var VC = message.member.voiceChannel;
     
     if(message.content === '!join' && isReady) {
         isReady = false;

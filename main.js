@@ -2,12 +2,28 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 var isReady = true;
+var VC = message.member.voiceChannel;
 
 bot.on('ready', () => {
-    console.log('I ready!');
+    console.log('I ready I ready!');
 });
 
 bot.on('message' , message => {
+    
+    if(message.content === '!join' && isReady) {
+        isReady = false;
+        VC = message.member.voiceChannel;
+        VC.join().then(connection => {
+           
+        })
+        
+    }
+    
+    if(message.content === '!leave" && !isReady) {
+       VC = message.member.voiceChannel;
+       VC.leave();
+}
+       
 
     if(message.content === '!Kaibaman' && isReady) {
         isReady === false;
@@ -85,7 +101,7 @@ bot.on('message' , message => {
         var voiceChannel = message.member.voiceChannel;
         message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
         voiceChannel.join().then(connection => {
-            const dispatcher = connectionplayFile('Users/mattalter/Downloads/Explodia.mp3');
+            const dispatcher = connection.playFile('Users/mattalter/Downloads/Explodia.mp3');
             voiceChannel.leave();
         });
         isReady === true;

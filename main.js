@@ -118,6 +118,12 @@ bot.on('message' , message => {
         message.reply("My grandfather's deck has no pathetic cards");
         isReady === true;
     }
+    
+    else if(isReady && message.content === "Guess Who's Back") {
+        isReady === false;
+        message.reply("https://youtu.be/JnczksTB4us?t=5");
+        isReady === true;
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);

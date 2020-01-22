@@ -15,13 +15,14 @@ bot.on('message' , message => {
         VC = message.member.voiceChannel;
         VC.join().then(connection => {
            
-        })
-        
+        });
+
     }
     
     if(message.content === '!leave' && isReady === false) {
        VC = message.member.voiceChannel;
        VC.leave();
+       isReady = true;
     }
        
 
@@ -69,6 +70,10 @@ bot.on('message' , message => {
     else if(isReady && message.content === 'I Summon Exodia Necross') {
         isReady === false;
         message.reply("Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!");
+        message.reply({embed: {
+                color: 3447003,
+                description: "This message is embeded with a [masked link](https"//google.com)"
+            }});
         isReady === true;
     }
 

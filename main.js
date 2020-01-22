@@ -9,6 +9,7 @@ bot.on('ready', () => {
 
 bot.on('message' , message => {
     var VC = message.member.voiceChannel;
+    var textmsg = message.content.toLowerCase();
     
     if(message.content === '!join' && isReady) {
         isReady = false;
@@ -87,7 +88,7 @@ bot.on('message' , message => {
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === 'i summon exodia necross') {
+    else if(isReady && textmsg === 'i summon exodia necross') {
         isReady = false;
 //         message.reply("[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)");
         message.channel.send({embed: {
@@ -158,7 +159,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && message.content.toLowerCase().endsWith() === "pot of greed") {
+    else if(isReady && textmsg.endsWith() === "pot of greed") {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,

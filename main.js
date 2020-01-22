@@ -5,7 +5,6 @@ var isReady = true;
 
 bot.on('ready', () => {
     console.log('I ready I ready!');
-    client.message.send(coyoteboss, "guess who's back");
 });
 
 bot.on('message' , message => {

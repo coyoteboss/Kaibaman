@@ -31,10 +31,16 @@ bot.on('message' , message => {
         var rand = Math.floor(Math.random() * 8);
 
         if(rand === 0) {
-            message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
+            message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Ah Exodia it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1o8cEUXPC4mgcFlFONRP0SCgh7wvXcH8_)"
+            }});
         }
         else if(rand === 1) {
-            message.reply("Ah Exodia Necross it's not possible. Nobody's every been able to summon him!");
+            message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)"
+            }});
         }
 
         else if(rand === 2) {
@@ -54,7 +60,10 @@ bot.on('message' , message => {
         }
 
         else if(rand === 6) {
-            message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
+            message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Ah Explodia it's not possible. Nobody's ever been able to escape him!](https://drive.google.com/open?id=1aaOD9k1py80axmAPQjkD_hpFEyo5pPPM)"
+            }});
         }
         else if(rand === 7) {
             message.channel.send({embed: {
@@ -68,9 +77,10 @@ bot.on('message' , message => {
     var voiceChannel;
 
     if(isReady && message.content.toLowerCase() === 'i summon exodia') {
-        isReady === false;
-        message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
-        isReady === true;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Ah Exodia it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1o8cEUXPC4mgcFlFONRP0SCgh7wvXcH8_)"
+            }});
     }
 
     else if(isReady && message.content.toLowerCase() === 'i summon exodia necross') {
@@ -110,17 +120,25 @@ bot.on('message' , message => {
     else if(isReady && message.content.toLowerCase() === 'i summon explodia') { 
         isReady === false;
 //         var voiceChannel = message.member.voiceChannel;
-        message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
+//                message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
 //         voiceChannel.join().then(connection => {
 //             const dispatcher = connection.playFile('Users/mattalter/Downloads/Explodia.mp3');
 //             voiceChannel.leave();
 //         });
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Ah Explodia it's not possible. Nobody's ever been able to escape him!](https://drive.google.com/open?id=1aaOD9k1py80axmAPQjkD_hpFEyo5pPPM)"
+            }});
         isReady === true;
     }
 
-    else if(isReady && message.content.toLowerCase() === "my grandfather's deck has no pathetic cards") {
+    else if(isReady && message.content.toLowerCase() === "my grandpa's deck has no pathetic cards") {
         isReady === false;
-        message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
+//         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Ah Exodia it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1o8cEUXPC4mgcFlFONRP0SCgh7wvXcH8_)"
+            }});
         isReady === true;
     }
 
@@ -135,6 +153,8 @@ bot.on('message' , message => {
         message.reply("https://youtu.be/JnczksTB4us?t=5");
         isReady === true;
     }
+    
+//     else if(isReady && message.content.toLowerCase() === "
 });
 
 bot.login(process.env.BOT_TOKEN);

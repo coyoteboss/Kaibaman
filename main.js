@@ -168,6 +168,15 @@ bot.on('message' , message => {
         isReady = true;
     }
     
+    else if(isReady && textmsg.endsWith("what does pot of greed do") {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Pot Of Greed You Say!](https://drive.google.com/open?id=1AlLWwGNkoKTj_MSMumCfM_G2VjUlGItX)"
+            }});
+        isReady = true;
+    }
+    
     else if(isReady && textmsg === "!kiabaman") {
         isReady = false;
         message.channel.send({embed: {

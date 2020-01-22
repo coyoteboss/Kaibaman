@@ -168,7 +168,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg.endsWith("what does pot of greed do") {
+    else if(isReady && textmsg.endsWith("what does pot of greed do")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,

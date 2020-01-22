@@ -159,7 +159,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg.endsWith() === "pot of greed") {
+    else if(isReady && textmsg.endsWith("pot of greed")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -186,7 +186,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && message.content.toLowerCase().endsWith() === "ghost of a chance") {
+    else if(isReady && message.content.toLowerCase().endsWith("ghost of a chance")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,

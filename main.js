@@ -67,7 +67,7 @@ bot.on('message' , message => {
         isReady === true;
     }
 
-    else if(isReady && message.content.toLocaleUpperCase === 'I SUMMON EXODIA NECROSS') {
+    else if(isReady && message.content.toUpperCase() === 'I SUMMON EXODIA NECROSS') {
         isReady === false;
 //         message.reply("[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)");
         message.channel.send({embed: {

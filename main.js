@@ -74,8 +74,6 @@ bot.on('message' , message => {
                 color: 3447003,
                 description: "[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)"
             }});
-        
-        message.toString(): (hello);
         isReady === true;
     }
 

@@ -70,6 +70,10 @@ bot.on('message' , message => {
     else if(isReady && message.content === 'I Summon Exodia Necross') {
         isReady === false;
         message.reply("[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)");
+        message: ({embed: {
+                color: 3447003,
+                description: "[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)"
+            }});
         isReady === true;
     }
 

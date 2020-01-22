@@ -72,7 +72,7 @@ bot.on('message' , message => {
         message.reply("Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!");
         message.reply({embed: {
                 color: 3447003,
-                description: "This message is embeded with a [masked link](https"//google.com)"
+                description: "This message is embeded with a [masked link](https://google.com)"
             }});
         isReady === true;
     }

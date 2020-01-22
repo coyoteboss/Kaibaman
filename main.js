@@ -61,13 +61,13 @@ bot.on('message' , message => {
 
     var voiceChannel;
 
-    if(isReady && message.content === 'I Summon Exodia') {
+    if(isReady && message.content.toLowerCase() === 'i summon exodia') {
         isReady === false;
         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content.toUpperCase() === 'I SUMMON EXODIA NECROSS') {
+    else if(isReady && message.content.toLowerCase() === 'i summon exodia necross') {
         isReady === false;
 //         message.reply("[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)");
         message.channel.send({embed: {
@@ -77,54 +77,54 @@ bot.on('message' , message => {
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I Summon The Legendary Exodia Incarnate') { 
+    else if(isReady && message.content.toLowerCase() === 'i summon the legendary exodia incarnate') { 
         isReady === false;
         message.reply("Ah The Legendary Exodia Incarnate it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I Summon Exodia Master of The Guard') { 
+    else if(isReady && message.content.toLowerCase() === 'e summon exodia master of the guard') { 
         isReady === false;
         message.reply("Ah Exodia Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I Summon Exxod Master of The Guard') { 
+    else if(isReady && message.content.toLowerCase() === 'i summon exxod master of the guard') { 
         isReady === false;
         message.reply("Ah Exxod Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I Summon Exodius The Ultimate Forbidden Lord') { 
+    else if(isReady && message.content.toLowerCase() === 'i summon exodius the ultimate forbidden lord') { 
         isReady === false;     
         message.reply("Ah Exodius The Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === 'I Summon Explodia') { 
+    else if(isReady && message.content.toLowerCase() === 'i summon explodia') { 
         isReady === false;
-        var voiceChannel = message.member.voiceChannel;
+//         var voiceChannel = message.member.voiceChannel;
         message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
-        voiceChannel.join().then(connection => {
-            const dispatcher = connection.playFile('Users/mattalter/Downloads/Explodia.mp3');
-            voiceChannel.leave();
-        });
+//         voiceChannel.join().then(connection => {
+//             const dispatcher = connection.playFile('Users/mattalter/Downloads/Explodia.mp3');
+//             voiceChannel.leave();
+//         });
         isReady === true;
     }
 
-    else if(isReady && message.content === "My Grandfather's Deck Has No Pathetic Cards") {
+    else if(isReady && message.content.toLowerCase() === "my grandfather's deck has no pathetic cards") {
         isReady === false;
         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         isReady === true;
     }
 
-    else if(isReady && message.content === "Draw Your Last Pathetic Card") {
+    else if(isReady && message.content.toLowerCase() === "draw your last pathetic card") {
         isReady === false;
         message.reply("My grandfather's deck has no pathetic cards");
         isReady === true;
     }
     
-    else if(isReady && message.content === "Guess Who's Back") {
+    else if(isReady && message.content.toLowerCase() === "guess who's back") {
         isReady === false;
         message.reply("https://youtu.be/JnczksTB4us?t=5");
         isReady === true;

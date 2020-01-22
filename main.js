@@ -26,9 +26,9 @@ bot.on('message' , message => {
     }
        
 
-    if(message.content === '!Kaibaman' && isReady) {
+    if(message.content.toLowerCase() === '!kaibaman' && isReady) {
         isReady === false;
-        var rand = Math.floor(Math.random() * 7);
+        var rand = Math.floor(Math.random() * 8);
 
         if(rand === 0) {
             message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
@@ -56,6 +56,12 @@ bot.on('message' , message => {
         else if(rand === 6) {
             message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
         }
+        else if(rand === 7) {
+            message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[I Summon Forth Myself Kaibaman](https://drive.google.com/open?id=18Q-D7YjhWk8Vy4h1lYfu5RPTRbtoiyWy)"
+            }});
+        }
         isReady === true;
     }
 
@@ -71,7 +77,7 @@ bot.on('message' , message => {
         isReady === false;
 //         message.reply("[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)");
         message.channel.send({embed: {
-                color: 3447003,
+//                 color: 3447003,
                 description: "[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)"
             }});
         isReady === true;

@@ -28,7 +28,7 @@ bot.on('message' , message => {
 
     if(message.content.toLowerCase() === '!kaibaman' && isReady) {
         isReady === false;
-        var rand = Math.floor(Math.random() * 8);
+        var rand = Math.floor(Math.random() * 9);
 
         if(rand === 0) {
             message.channel.send({embed: {
@@ -42,23 +42,18 @@ bot.on('message' , message => {
                 description: "[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)"
             }});
         }
-
         else if(rand === 2) {
             message.reply("Ah The Legendary Exodia Incarnate it's not possible. Nobody's ever been able to summon him!");
         }
-
         else if(rand === 3) {
             message.reply("Ah Exodia Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         }
-
         else if(rand === 4) {
             message.reply("Ah Exxod Master of the Guard it's not possible. Nobody's ever been able to summon him!");
         }
-
         else if(rand === 5) {
             message.reply("Ah Exodius the Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
         }
-
         else if(rand === 6) {
             message.channel.send({embed: {
 //                 color: 3447003,
@@ -71,54 +66,63 @@ bot.on('message' , message => {
                 description: "[I Summon Forth Myself Kaibaman](https://drive.google.com/open?id=18Q-D7YjhWk8Vy4h1lYfu5RPTRbtoiyWy)"
             }});
         }
+        else if(rand === 8) {
+            message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[The Amazing Kaibaman](https://drive.google.com/open?id=1fjTTi--4bFL9guHI-9fULv82btX5jeEF)"
+            }});
+        }
+        
         isReady === true;
     }
 
     var voiceChannel;
 
     if(isReady && message.content.toLowerCase() === 'i summon exodia') {
+        isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
                 description: "[Ah Exodia it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1o8cEUXPC4mgcFlFONRP0SCgh7wvXcH8_)"
             }});
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === 'i summon exodia necross') {
-        isReady === false;
+        isReady = false;
 //         message.reply("[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)");
         message.channel.send({embed: {
 //                 color: 3447003,
                 description: "[Ah Exodia Necross it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1VVVW675fZGnjSaDWjt_9xleiS6Ml3sdN)"
             }});
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === 'i summon the legendary exodia incarnate') { 
-        isReady === false;
+        isReady = false;
         message.reply("Ah The Legendary Exodia Incarnate it's not possible. Nobody's ever been able to summon him!");
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === 'e summon exodia master of the guard') { 
-        isReady === false;
+        isReady = false;
         message.reply("Ah Exodia Master of The Guard it's not possible. Nobody's ever been able to summon him!");
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === 'i summon exxod master of the guard') { 
-        isReady === false;
+        isReady = false;
         message.reply("Ah Exxod Master of The Guard it's not possible. Nobody's ever been able to summon him!");
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === 'i summon exodius the ultimate forbidden lord') { 
-        isReady === false;     
+        isReady = false;     
         message.reply("Ah Exodius The Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === 'i summon explodia') { 
-        isReady === false;
+        isReady = false;
 //         var voiceChannel = message.member.voiceChannel;
 //                message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
 //         voiceChannel.join().then(connection => {
@@ -129,17 +133,17 @@ bot.on('message' , message => {
 //                 color: 3447003,
                 description: "[Ah Explodia it's not possible. Nobody's ever been able to escape him!](https://drive.google.com/open?id=1aaOD9k1py80axmAPQjkD_hpFEyo5pPPM)"
             }});
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === "my grandpa's deck has no pathetic cards") {
-        isReady === false;
+        isReady = false;
 //         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         message.channel.send({embed: {
 //                 color: 3447003,
                 description: "[Ah Exodia it's not possible. Nobody's ever been able to summon him!](https://drive.google.com/open?id=1o8cEUXPC4mgcFlFONRP0SCgh7wvXcH8_)"
             }});
-        isReady === true;
+        isReady = true;
     }
 
     else if(isReady && message.content.toLowerCase() === "draw your last pathetic card") {
@@ -149,12 +153,46 @@ bot.on('message' , message => {
     }
     
     else if(isReady && message.content.toLowerCase() === "guess who's back") {
-        isReady === false;
+        isReady = false;
         message.reply("https://youtu.be/JnczksTB4us?t=5");
-        isReady === true;
+        isReady = true;
     }
     
-//     else if(isReady && message.content.toLowerCase() === "
+    else if(isReady && message.content.toLowerCase().endsWith() === "pot of greed") {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[I activate the magic card pot of greed!](https://drive.google.com/open?id=1ItbsBgZV-1thII-H_t2Ff5q33hy8Y9Oi)"
+            }});
+        isReady = true;
+    }
+    
+    else if(isReady && message.content.toLowerCase() === "!kiabaman") {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[My Name's Not Kiaba!](https://drive.google.com/open?id=1z2r8LrsTWoXlNqk1vshRfnVKwn9t0FWl)"
+            }});
+        isReady = true;
+    }
+    
+    else if(isReady && message.content.toLowerCase() === "screw the rules") {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Looks like the rules just got screwed!](https://drive.google.com/open?id=11zPExQAx9fJRf-MScHadGuzxWpP3jkUV)"
+            }});
+        isReady = true;
+    }
+    
+    else if(isReady && message.content.toLowerCase().endsWith() === "ghost of a chance") {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Looks like the rules just got screwed!](https://drive.google.com/open?id=1Dc8dVzygcAQydDkEsYIqXPReL4JWDEKM)"
+            }});
+        isReady = true;
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);

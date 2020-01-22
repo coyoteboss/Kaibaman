@@ -27,7 +27,7 @@ bot.on('message' , message => {
     }
        
 
-    if(message.content.toLowerCase() === '!kaibaman' && isReady) {
+    if(textmsg === '!kaibaman' && isReady) {
         isReady === false;
         var rand = Math.floor(Math.random() * 9);
 
@@ -79,7 +79,7 @@ bot.on('message' , message => {
 
     var voiceChannel;
 
-    if(isReady && message.content.toLowerCase() === 'i summon exodia') {
+    if(isReady && textmsg === 'i summon exodia') {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -98,31 +98,31 @@ bot.on('message' , message => {
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === 'i summon the legendary exodia incarnate') { 
+    else if(isReady && textmsg === 'i summon the legendary exodia incarnate') { 
         isReady = false;
         message.reply("Ah The Legendary Exodia Incarnate it's not possible. Nobody's ever been able to summon him!");
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === 'e summon exodia master of the guard') { 
+    else if(isReady && textmsg === 'e summon exodia master of the guard') { 
         isReady = false;
         message.reply("Ah Exodia Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === 'i summon exxod master of the guard') { 
+    else if(isReady && textmsg === 'i summon exxod master of the guard') { 
         isReady = false;
         message.reply("Ah Exxod Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === 'i summon exodius the ultimate forbidden lord') { 
+    else if(isReady && textmsg === 'i summon exodius the ultimate forbidden lord') { 
         isReady = false;     
         message.reply("Ah Exodius The Ultimate Forbidden Lord it's not possible. Nobody's ever been able to summon him!");
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === 'i summon explodia') { 
+    else if(isReady && textmsg === 'i summon explodia') { 
         isReady = false;
 //         var voiceChannel = message.member.voiceChannel;
 //                message.reply("Ah Explodia it's not possible. Nobody's ever been able to escape him!");
@@ -137,7 +137,7 @@ bot.on('message' , message => {
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === "my grandpa's deck has no pathetic cards") {
+    else if(isReady && textmsg === "my grandpa's deck has no pathetic cards") {
         isReady = false;
 //         message.reply("Ah Exodia it's not possible. Nobody's ever been able to summon him!");
         message.channel.send({embed: {
@@ -147,13 +147,13 @@ bot.on('message' , message => {
         isReady = true;
     }
 
-    else if(isReady && message.content.toLowerCase() === "draw your last pathetic card") {
+    else if(isReady && textmsg === "draw your last pathetic card") {
         isReady === false;
         message.reply("My grandfather's deck has no pathetic cards");
         isReady === true;
     }
     
-    else if(isReady && message.content.toLowerCase() === "guess who's back") {
+    else if(isReady && textmsg === "guess who's back") {
         isReady = false;
         message.reply("https://youtu.be/JnczksTB4us?t=5");
         isReady = true;
@@ -168,7 +168,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && message.content.toLowerCase() === "!kiabaman") {
+    else if(isReady && textmsg === "!kiabaman") {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -177,7 +177,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && message.content.toLowerCase() === "screw the rules") {
+    else if(isReady && textmsg === "screw the rules") {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -186,11 +186,11 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && message.content.toLowerCase().endsWith("ghost of a chance")) {
+    else if(isReady && textmsg.endsWith("ghost of a chance")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
-                description: "[Looks like the rules just got screwed!](https://drive.google.com/open?id=1Dc8dVzygcAQydDkEsYIqXPReL4JWDEKM)"
+                description: "[Looks like you don't stand a ghost of a chance!](https://drive.google.com/open?id=1Dc8dVzygcAQydDkEsYIqXPReL4JWDEKM)"
             }});
         isReady = true;
     }

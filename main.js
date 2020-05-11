@@ -203,6 +203,15 @@ bot.on('message' , message => {
             }});
         isReady = true;
     }
+    
+    else if(isReady && textmsg.includes("meme")  && textmsg.includes("old")) {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Looks like this meme is really old!](https://drive.google.com/open?id=1uX8Vx_sYKh_yYf5IaF4ZL9ZbRePVk4DY)"
+            }});
+        isReady = true;
+    }
 
 });
 

@@ -104,7 +104,7 @@ bot.on('message' , message => {
         isReady = true;
     }
 
-    else if(isReady && textmsg === 'e summon exodia master of the guard') { 
+    else if(isReady && textmsg === 'i summon exodia master of the guard') { 
         isReady = false;
         message.reply("Ah Exodia Master of The Guard it's not possible. Nobody's ever been able to summon him!");
         isReady = true;
@@ -203,6 +203,7 @@ bot.on('message' , message => {
             }});
         isReady = true;
     }
+
 });
 
 bot.login(process.env.BOT_TOKEN);

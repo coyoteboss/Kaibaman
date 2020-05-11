@@ -159,7 +159,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg.endsWith("pot of greed")) {
+    else if(isReady && textmsg.includes("pot of greed") && !textmsg.includes("what")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -168,7 +168,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg.endsWith("what does pot of greed do")) {
+    else if(isReady && textmsg.includes("what does pot of greed do")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -186,7 +186,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg === "screw the rules") {
+    else if(isReady && textmsg.includes("screw the rules")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
@@ -195,7 +195,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg.endsWith("ghost of a chance")) {
+    else if(isReady && textmsg.includes("ghost of a chance")) {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,

@@ -212,6 +212,33 @@ bot.on('message' , message => {
             }});
         isReady = true;
     }
+    
+    else if(isReady && textmsg.includes("like a boss")) {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[Like a boss!](https://drive.google.com/open?id=1Qq9Ln2rEoNPObfyrmJbjY7olssWRWglu)"
+            }});
+        isReady = true;
+    }
+    
+    else if(isReady && textmsg.includes("the amazing kaibaman")) {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[The amazing kaibaman!](https://drive.google.com/open?id=1fjTTi--4bFL9guHI-9fULv82btX5jeEF)"
+            }});
+        isReady = true;
+    }
+    
+    else if(isReady && textmsg.includes("i summon kaibaman")) {
+        isReady = false;
+        message.channel.send({embed: {
+//                 color: 3447003,
+                description: "[I summon myself Kaibaman!](https://drive.google.com/open?id=18Q-D7YjhWk8Vy4h1lYfu5RPTRbtoiyWy)"
+            }});
+        isReady = true;
+    }
 
 });
 

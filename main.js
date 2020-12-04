@@ -240,17 +240,17 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg "!testbroadcast") {
+    else if(isReady && textmsg === "!testbroadcast") {
         isReady = false;
-        /*
+        
+        message.channel.send("test tts", {tts: true});
+        
         const broadcast = client.voice.createBroadcast();
         broadcast.play('./Kaibaman.mp3');
         // Play "music.mp3" in all voice connections that the client is in
         for (const connection of client.voice.connections.values()) {
             connection.play(broadcast);
         }
-        */
-        message.channel.send("test tts", {tts: true});
         isReady = true;
     }
 

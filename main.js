@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 var isReady = true;
-
+// Use node . in the console of heroku to start a seperate kaibaman.
 bot.on('ready', () => {
     console.log('I ready I ready!');
 });

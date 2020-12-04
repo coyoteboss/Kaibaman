@@ -242,6 +242,7 @@ bot.on('message' , message => {
     
     else if(isReady && textmsg === "!TestBroadcast") {
         isReady = false;
+        message.reply("made it");
         /*
         const broadcast = client.voice.createBroadcast();
         broadcast.play('./Kaibaman.mp3');

@@ -240,7 +240,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg === "!TestBrodcast") {
+    else if(isReady && textmsg === "!TestBroadcast") {
         isReady = false;
         /*
         const broadcast = client.voice.createBroadcast();
@@ -250,7 +250,7 @@ bot.on('message' , message => {
             connection.play(broadcast);
         }
         */
-        message.channel.sent("test tts", {tts: true});
+        message.channel.send("test tts", {tts: true});
         isReady = true;
     }
 

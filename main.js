@@ -248,6 +248,8 @@ bot.on('message' , message => {
         for (const connection of client.voice.connections.values()) {
             connection.play(broadcast);
         }
+        message.channel.sent("played");
+        isReady = true;
     }
 
 });

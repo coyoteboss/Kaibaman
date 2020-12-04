@@ -235,14 +235,13 @@ bot.on('message' , message => {
         isReady = false;
         message.channel.send({embed: {
 //                 color: 3447003,
-                description: "[I summon myself Kaibaman! ACCTIVATION TEST](https://drive.google.com/open?id=18Q-D7YjhWk8Vy4h1lYfu5RPTRbtoiyWy)"
+                description: "[I summon myself Kaibaman!](https://drive.google.com/open?id=18Q-D7YjhWk8Vy4h1lYfu5RPTRbtoiyWy)"
             }});
         isReady = true;
     }
     
-    else if(isReady && textmsg === "!TestBroadcast") {
+    else if(isReady && textmsg "!testbroadcast") {
         isReady = false;
-        message.reply("made it");
         /*
         const broadcast = client.voice.createBroadcast();
         broadcast.play('./Kaibaman.mp3');

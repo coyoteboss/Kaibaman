@@ -240,7 +240,7 @@ bot.on('message' , message => {
         isReady = true;
     }
     
-    else if(isReady && textmsg == "!TestBrodcast") {
+    else if(isReady && textmsg === "!TestBrodcast") {
         isReady = false;
         /*
         const broadcast = client.voice.createBroadcast();
